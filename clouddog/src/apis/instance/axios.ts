@@ -10,3 +10,9 @@ export const instance = axios.create({
     'Content-Type': 'application/json',
   },
 });
+
+instance.interceptors.request.use((config) => {
+  const accessToken = SessionStorage.getItem('accessToken');
+  config.headers.Authorization = `Bearer ${accessToken}`;
+  return config;
+});
