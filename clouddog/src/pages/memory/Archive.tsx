@@ -105,7 +105,7 @@ const Archive = () => {
   };
 
   const addPostOnClick = () => {
-    router.push('/memory/addPost');
+    router.push('/memory/AddPost');
   };
 
   return (
@@ -197,6 +197,8 @@ const AddArchiveBtn = styled.div`
   border-radius: 0.7vw;
   border: 1px solid black;
   background-color: #fef1de;
+
+  cursor: pointer;
 `;
 
 const AddArchiveBtnImg = styled.div`
